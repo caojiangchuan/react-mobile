@@ -22,6 +22,14 @@ const Index = Loadable({
     loader: () => import('../view/index'),
     loading: MyLoadingComponent
 });
+const Com = Loadable({
+    loader: () => import('../view/component'),
+    loading: MyLoadingComponent
+});
+const Echarts = Loadable({
+    loader: () => import('../view/echarts'),
+    loading: MyLoadingComponent
+});
 // const AsyncWelcome = Loadable({
 //   loader: () => import('./page/welcome/'),
 //   loading: MyLoadingComponent
@@ -49,6 +57,8 @@ const Index = Loadable({
 
 const routes = [
     { path: '/index', component: Index, exact: true },
+    { path: '/component', component: Com },
+    { path: '/echarts', component: Echarts },
     // { path: '*', component: Index },
     // { path: '/login', component: AsyncLogin },
     // { path: '/welcome', component: AsyncWelcome },
